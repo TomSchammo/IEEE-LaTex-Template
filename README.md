@@ -34,27 +34,27 @@ So the easiest way is to:
 
 ```
 ieee-latex-template/
-├── main.tex                    # Main template file (edit this!)
+├── main.tex                   # Main template file (edit this!)
 ├── IEEEtran.cls               # IEEE class file
 ├── references.bib             # Bibliography file (BibTeX/main branch)
 ├── Makefile                   # Build system
 ├──
 ├── img/                       # Graphics directory
-│   └── fig1.png              # Example figure
+│   └── fig1.png               # Example figure
 ├──
 ├── styles/                    # BibTeX style files
-│   ├── IEEEtran.bst          # Standard IEEE style
-│   └── IEEEtranS.bst         # Sorted IEEE style
+│   ├── IEEEtran.bst           # Standard IEEE style
+│   └── IEEEtranS.bst          # Sorted IEEE style
 ├──
 ├── bibliography/              # Bibliography resources
-│   ├── IEEEabrv.bib          # Abbreviated journal names
-│   ├── IEEEfull.bib          # Full journal names
-│   └── IEEEexample.bib       # Example bibliography
+│   ├── IEEEabrv.bib           # Abbreviated journal names
+│   ├── IEEEfull.bib           # Full journal names
+│   └── IEEEexample.bib        # Example bibliography
 ├──
 ├── docs/                      # Documentation
-│   ├── IEEEtran_HOWTO.pdf    # Class documentation
+│   ├── IEEEtran_HOWTO.pdf     # Class documentation
 │   ├── IEEEtran_bst_HOWTO.pdf # BibTeX style documentation
-│   └── README                # Original README
+│   └── README                 # Original README
 └──
 └── output/                    # Build artifacts (auto-generated)
 ```
