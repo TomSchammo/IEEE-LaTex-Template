@@ -1,0 +1,28 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: ["main", "bibtex", "traditional"]
+  pull_request:
+    branches: ["main", "bibtex", "traditional"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: mkdir -p output
+
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install texlive texlive-publishers texlive-science latexmk texlive-bibtex-extra texlive-pstricks
+
+      - name: Build document
+        run: make
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: paper-${{ github.ref_name }}
+          path: output/main.pdf
+          retention-days: 30
